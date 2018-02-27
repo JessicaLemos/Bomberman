@@ -61,7 +61,11 @@ convertToNum l p t = aux (cooryBomb l p t) (convert l p t)
 {-| Esta função verifica se o jogador se encontra num local do mapa sob ação de uma bomba. Assim, temos de verificar se o seu número no mapa corresponde a um dos números 
 da lista com os números do mapa em que a chama se pode propagar. -}
 bombaJog :: [String] -> Int -> Int -> Bool
+<<<<<<< HEAD
 bombaJog l p t =  elem (coorOurJogNum l p t) (locaisComChama l p t ) 
+=======
+bombaJog l p t =  elem (coorOurJogNum l p t) (convertToNum l p t) 
+>>>>>>> 1aa4b9b4fabc172ccebc01372048836cd5810021
 
 {-| A função "infOurJog" devolve uma lista com a informação do nosso jogador. Para tal percorremos a informação do mapa até encontrarmos uma lista cujo primeiro elemento
 é o dígito igual ao do nosso jogador. -}
